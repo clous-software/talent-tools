@@ -270,10 +270,6 @@ const Home = () => {
     return (
       <>
       <Head>
-      <Script
-        src="https://unpkg.com/pdfjs-dist/build/pdf.worker.min.js"
-        strategy="beforeInteractive"
-      />
       <title>{t('SEO.title')}</title>
         <meta name="description" content={t('SEO.description')} />
         <meta name="robots" content={t('SEO.robots')} />
