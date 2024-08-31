@@ -214,7 +214,7 @@ const Home = () => {
       </Head>
     
       <main className="bg-[#FAFAFA] bg-pattern bg-gradient-to-br from-gray-50 to-gray-100 px-24">
-      <p className="absolute left-24 top-4 text-primary text-base font-medium">Made by Clous</p>
+      <p className="absolute left-24 top-8 text-primary text-lg font-medium">Made by Clous</p>
 
       <main className="mb-12 flex justify-between items-start text-left w-full mx-auto">
     <section className="flex flex-col h-screen">

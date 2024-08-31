@@ -289,6 +289,8 @@ const Home = () => {
       </Head>
     
       <main className="bg-[#FAFAFA] bg-pattern bg-gradient-to-br from-gray-50 to-gray-100 px-24">
+      <p className="absolute left-24 top-8 text-primary text-lg font-medium">Made by Clous</p>
+
         {!isTyping ? (
           <>
           <main className="mb-12 flex justify-between items-start text-left w-full mx-auto">
