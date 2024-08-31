@@ -2,8 +2,11 @@
 import { NextResponse } from 'next/server';
 import Groq from 'groq-sdk';
 
-// Initialize Groq client with the API key (server-side only)
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+const apiKey = process.env.GROQ_API_KEY;
+if (!apiKey) {
+  throw new Error('GROQ_API_KEY environment variable is not set');
+}
+const groq = new Groq({ apiKey });
 
 export async function POST(request: Request) {
   try {
