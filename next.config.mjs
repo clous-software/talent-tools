@@ -1,4 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+import createNextIntlPlugin from 'next-intl/plugin';
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin();
+
+const nextConfig = {
+    env: {
+        GROQ_API_KEY: process.env.GROQ_API_KEY,
+        OPENAI_API_KEY: process.env.OPENAI_API_KEY,
+    }
+};
+
+export default withNextIntl(nextConfig);
