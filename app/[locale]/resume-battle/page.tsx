@@ -8,9 +8,6 @@ import Footer from "@/components/navigation/Footer";
 import FileInput from "@/components/ui/fileInput";
 import mammoth from 'mammoth';
 import Head from 'next/head';
-import Script from 'next/script';
-import dynamic from 'next/dynamic';
-
 
 interface ScrollHeaderProps {
   translate: any; // Use the actual type if known; 'any' is a placeholder
@@ -23,7 +20,7 @@ interface ScrollCardProps {
   translate: any;
 }
 
-const Home = () => {
+const ResumeBattle = () => {
   const t = useTranslations('HomePage');
 
   const [file, setFile] = useState<string>('');
@@ -331,4 +328,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default ResumeBattle;
