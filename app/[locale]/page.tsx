@@ -10,9 +10,6 @@ import Image from 'next/image';
 import Head from 'next/head';
 import { unstable_setRequestLocale } from 'next-intl/server';
 
-export function generateStaticParams() {
-  return ['en', 'es'].map((locale) => ({ locale }));
-}
 
 interface ScrollHeaderProps {
   translate: any;
