@@ -6,7 +6,7 @@ import {getMessages} from 'next-intl/server';
 
 const inter = Inter({ subsets: ["latin"] });
 
-const locales = ['en', 'de', 'fr', 'es', 'pt'];
+const locales = ['en', 'es'];
 
 export const metadata: Metadata = {
   title: "Create Next App",
