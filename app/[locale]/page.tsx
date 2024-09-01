@@ -8,6 +8,11 @@ import Footer from "@/components/navigation/Footer";
 import Link from 'next/link';
 import Image from 'next/image';
 import Head from 'next/head';
+import { unstable_setRequestLocale } from 'next-intl/server';
+
+export function generateStaticParams() {
+  return ['en', 'es'].map((locale) => ({ locale }));
+}
 
 interface ScrollHeaderProps {
   translate: any;
@@ -20,7 +25,8 @@ interface ScrollCardProps {
   translate: any;
 }
 
-const Home = () => {
+const Home = ({ params: { locale } }: { params: { locale: string } }) => {
+  unstable_setRequestLocale(locale);
   const t = useTranslations('HomePage');
 
   const { scrollYProgress } = useScroll();
