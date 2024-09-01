@@ -8,7 +8,6 @@ import Footer from "@/components/navigation/Footer";
 import FileInput from "@/components/ui/fileInput";
 import mammoth from 'mammoth';
 import Head from 'next/head';
-import { unstable_setRequestLocale } from 'next-intl/server';
 
 interface ScrollHeaderProps {
   translate: any; // Use the actual type if known; 'any' is a placeholder
@@ -21,8 +20,7 @@ interface ScrollCardProps {
   translate: any;
 }
 
-const ResumeRoast = ({ params: { locale } }: { params: { locale: string } }) => {
-  unstable_setRequestLocale(locale);
+const ResumeRoast = () => {
   const t = useTranslations('HomePage');
 
   const [file, setFile] = useState<string>('');
