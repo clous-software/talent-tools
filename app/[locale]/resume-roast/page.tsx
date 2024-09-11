@@ -268,7 +268,7 @@ const ResumeRoast = () => {
 
     return (
       <>
-      {/* <Head>
+      <head>
       <title>{t('SEO.title')}</title>
         <meta name="description" content={t('SEO.description')} />
         <meta name="robots" content={t('SEO.robots')} />
@@ -281,7 +281,7 @@ const ResumeRoast = () => {
         <meta name="twitter:title" content={t('SEO.twitter.title')} />
         <meta name="twitter:description" content={t('SEO.description')} />
         <meta name="twitter:image" content={t('SEO.image')} />
-      </Head> */}
+      </head>
     
       <main className="bg-[#FAFAFA] bg-pattern bg-gradient-to-br from-gray-50 to-gray-100 px-24">
       <Link href="https://talent.clous.app" className="absolute left-24 top-8 text-primary text-lg font-medium">Made by Clous</Link>
