@@ -5,7 +5,7 @@ const withNextIntl = createNextIntlPlugin();
 
 const nextConfig = {
     env: {
-        GROQ_API_URL: 'https://server-clous-3ac15fe26491.herokuapp.com',
+        GROQ_API_KEY: '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',
       }
 };
 
