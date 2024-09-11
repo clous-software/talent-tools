@@ -37,7 +37,7 @@ const Home = () => {
           style={{
             translateY: translate,
           }}
-          className="div mx-auto text-left mb-24 flex flex-col lg:flex-row lg:gap-12"
+          className="div mx-auto text-left flex flex-col lg:flex-row lg:gap-12"
         > 
         <div className='w-[50%]'>
 
@@ -52,31 +52,31 @@ const Home = () => {
           <div className="flex items-center justify-between mt-2 text-xl gap-2 fadeOut">
 
           <Button 
-            onClick={() => window.open("https://beta.clous.app/")} 
+            onClick={() => window.open("https://x.com/cloushq")} 
             className="text-white max-w-[12rem]" 
           >{t('hero.cta')}</Button> 
       </div>
       </div>
 
       <section className="grid lg:grid-cols-2 grid-cols-1 gap-3 mt-3 w-[50%]">
-      <Link href="https://talent.clous.app/resume-roast" className="bg-[#FAFAFA] group relative overflow-hidden h-32 flex flex-col justify-between border rounded-2xl p-4 cursor-pointer hover:shadow-sm hover:-translate-y-0.5 transtion-all duration-200 delay-100">
-          <h3 className="font-medium text-lg mr-8">Roast my resume</h3>
-          <p className="text-sm text-gray-700">Learn about how to use Clous most effectively to achieve in your hiring goals.</p>
+      <Link href={`/en/resume-roast`} className="bg-[#FAFAFA] group relative overflow-hidden h-32 flex flex-col justify-between border rounded-2xl p-4 cursor-pointer hover:shadow-sm hover:-translate-y-0.5 transtion-all duration-200 delay-100">
+          <h3 className="font-medium text-lg mr-8">{t('sectionCards.cardOne.title')}</h3>
+          <p className="text-sm text-gray-700">{t('sectionCards.cardOne.description')}</p>
           <IoArrowForwardOutline className="w-6 h-6 -rotate-45 absolute -top-6 -right-6 group-hover:top-5 group-hover:right-5 transtion-all duration-300 delay-150"/>
         </Link>
-        <Link href="https://talent.clous.app/resume-roast" className="bg-[#FAFAFA] group relative overflow-hidden h-32 flex flex-col justify-between border rounded-2xl p-4 cursor-pointer hover:shadow-sm hover:-translate-y-0.5 transtion-all duration-200 delay-100">
-          <h3 className="font-medium text-lg mr-8">Why should I quit?</h3>
-          <p className="text-sm text-gray-700">Learn about how to use Clous most effectively to achieve in your hiring goals.</p>
+        <Link href={`/en/i-quit`} className="bg-[#FAFAFA] group relative overflow-hidden h-32 flex flex-col justify-between border rounded-2xl p-4 cursor-pointer hover:shadow-sm hover:-translate-y-0.5 transtion-all duration-200 delay-100">
+          <h3 className="font-medium text-lg mr-8">{t('sectionCards.cardTwo.title')}</h3>
+          <p className="text-sm text-gray-700">{t('sectionCards.cardTwo.description')}</p>
           <IoArrowForwardOutline className="w-6 h-6 -rotate-45 absolute -top-6 -right-6 group-hover:top-5 group-hover:right-5 transtion-all duration-300 delay-150"/>
         </Link>
-        <Link href="https://talent.clous.app/resume-roast" className="bg-[#FAFAFA] group relative overflow-hidden h-32 flex flex-col justify-between border rounded-2xl p-4 cursor-pointer hover:shadow-sm hover:-translate-y-0.5 transtion-all duration-200 delay-100">
-          <h3 className="font-medium text-lg mr-8">Resume battles</h3>
-          <p className="text-sm text-gray-700">Learn about how to use Clous most effectively to achieve in your hiring goals.</p>
+        <Link href="https://petie.clous.app" className="bg-[#FAFAFA] group relative overflow-hidden h-32 flex flex-col justify-between border rounded-2xl p-4 cursor-pointer hover:shadow-sm hover:-translate-y-0.5 transtion-all duration-200 delay-100">
+          <h3 className="font-medium text-lg mr-8">{t('sectionCards.cardThree.title')}</h3>
+          <p className="text-sm text-gray-700">{t('sectionCards.cardThree.description')}</p>
           <IoArrowForwardOutline className="w-6 h-6 -rotate-45 absolute -top-6 -right-6 group-hover:top-5 group-hover:right-5 transtion-all duration-300 delay-150"/>
         </Link>
-        <Link href="https://talent.clous.app/resume-roast" className="bg-[#FAFAFA] group relative overflow-hidden h-32 flex flex-col justify-between border rounded-2xl p-4 cursor-pointer hover:shadow-sm hover:-translate-y-0.5 transtion-all duration-200 delay-100">
-          <h3 className="font-medium text-lg mr-8">My skills gap</h3>
-          <p className="text-sm text-gray-700">Learn about how to use Clous most effectively to achieve in your hiring goals.</p>
+        <Link href={`/en/skills-gap`} className="bg-[#FAFAFA] group relative overflow-hidden h-32 flex flex-col justify-between border rounded-2xl p-4 cursor-pointer hover:shadow-sm hover:-translate-y-0.5 transtion-all duration-200 delay-100">
+          <h3 className="font-medium text-lg mr-8">{t('sectionCards.cardFour.title')}</h3>
+          <p className="text-sm text-gray-700">{t('sectionCards.cardFour.description')}</p>
           <IoArrowForwardOutline className="w-6 h-6 -rotate-45 absolute -top-6 -right-6 group-hover:top-5 group-hover:right-5 transtion-all duration-300 delay-150"/>
         </Link>
         </section>
@@ -199,7 +199,7 @@ const Home = () => {
 
     return (
       <>
-      {/*<Head>
+      <head>
       <title>{t('SEO.title')}</title>
         <meta name="description" content={t('SEO.description')} />
         <meta name="robots" content={t('SEO.robots')} />
@@ -212,34 +212,33 @@ const Home = () => {
         <meta name="twitter:title" content={t('SEO.twitter.title')} />
         <meta name="twitter:description" content={t('SEO.description')} />
         <meta name="twitter:image" content={t('SEO.image')} />
-      </Head>*/}
+      </head>
    
       <main className="bg-[#FAFAFA] bg-pattern bg-gradient-to-br from-gray-50 to-gray-100 px-24">
-      <p className="absolute left-24 top-8 text-primary text-lg font-medium">Made by Clous</p>
+      <Link href="https://www.clous.app" className="absolute left-24 top-8 text-primary text-lg font-medium">Made by Clous</Link>
 
       <main className="mb-12 flex justify-between items-start text-left w-full mx-auto">
     <section className="flex flex-col h-screen">
-      <div className="h-[210vh] transform flex items-center justify-center relative ">
+      <div className="h-[80vh] transform flex items-center justify-center relative ">
         <div
-          className="lg:py-24 w-full relative"
+          className="lg:pt-24 w-full relative"
           style={{
-            perspective: '1000px',
+            perspective: '60vh',
           }}
         >
           <ScrollHeader translate={translate} />
-          <ScrollCard rotate={rotate} rotateY={rotateY} translate={translate} scale={scale} />
         </div>
       </div>
 
     </section>
     </main>
-    <section id="scroll-section" ref={sectionRef} style={{ height: '140vh' }} className="px-2 mt-48">
-      <main className="sticky top-24 text-4xl font-medium" style={{ color: textColor, transition: 'color 0.3s ease' }}>
+    <section id="scroll-section" ref={sectionRef} style={{ height: '140vh' }} className="px-2">
+      <main className="sticky top-20 text-4xl font-medium" style={{ color: textColor, transition: 'color 0.3s ease' }}>
         {text.split('').map((char, index) => (
           <span key={index}>{char}</span>
         ))}
       </main>
-      <div className="sticky top-72 bg-white shadow-lg rounded-2xl overflow-hidden border border-gray-300 mt-24">
+      <div className="hidden top-72 bg-white shadow-lg rounded-2xl overflow-hidden border border-gray-300 mt-24">
         <div className="flex gap-4 items-center px-3 pt-2 border-b border-gray-300">
           <div className="flex space-x-2">
             <div className="w-3.5 h-3.5 bg-red-500 rounded-full"></div>
@@ -269,8 +268,10 @@ const Home = () => {
         ))}
         </div>
       </div>
+
     </section>
-    
+    <ScrollCard rotate={rotate} rotateY={rotateY} translate={translate} scale={scale} />
+
   </main>
     <Footer/>
     </>

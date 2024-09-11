@@ -8,7 +8,7 @@ import Footer from "@/components/navigation/Footer";
 import FileInput from "@/components/ui/fileInput";
 import mammoth from 'mammoth';
 import Head from 'next/head';
-
+import Link from 'next/link';
 interface ScrollHeaderProps {
   translate: any; // Use the actual type if known; 'any' is a placeholder
 }
@@ -21,7 +21,7 @@ interface ScrollCardProps {
 }
 
 const ResumeRoast = () => {
-  const t = useTranslations('HomePage');
+  const t = useTranslations('Roast');
 
   const [file, setFile] = useState<string>('');
   const [filePreview, setFilePreview] = useState<string>('');
@@ -34,7 +34,8 @@ const ResumeRoast = () => {
     const loadPdfJs = async () => {
       try {
         const pdfjs = (await import('pdfjs-dist'));
-        pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+        // Point to the locally hosted worker
+        pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.js';
         setPdfjsLib(pdfjs);
         console.log('PDF.js library loaded:', pdfjs);
       } catch (error) {
@@ -44,6 +45,7 @@ const ResumeRoast = () => {
   
     loadPdfJs();
   }, []);
+  
 
   const simulateTyping = (textToType: string) => {
     setIsTyping(true);
@@ -186,7 +188,7 @@ const ResumeRoast = () => {
           <div className="mt-2 text-xl gap-2 fadeOut">
 
           <Button 
-            onClick={() => window.open("https://beta.clous.app/")} 
+            onClick={() => window.open("https://x.com/cloushq")} 
             className="text-white max-w-[12rem]" 
           >{t('hero.cta')}</Button>
  
@@ -282,7 +284,7 @@ const ResumeRoast = () => {
       </Head> */}
     
       <main className="bg-[#FAFAFA] bg-pattern bg-gradient-to-br from-gray-50 to-gray-100 px-24">
-      <p className="absolute left-24 top-8 text-primary text-lg font-medium">Made by Clous</p>
+      <Link href="https://talent.clous.app" className="absolute left-24 top-8 text-primary text-lg font-medium">Made by Clous</Link>
 
         {!isTyping ? (
           <>
@@ -304,17 +306,17 @@ const ResumeRoast = () => {
           </>
         ) : (
           <>
-          <div dangerouslySetInnerHTML={{ __html: response }}></div>
+          <div className="text-sm pt-20" dangerouslySetInnerHTML={{ __html: response }}></div>
             {isCtaActive && (
               <div className='mt-6 flex gap-8'>
               <Button 
                 onClick={() => window.open("https://beta.clous.app/")} 
-                className="text-white max-w-[12rem]" 
+                className="text-white max-w-[12rem] hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200 delay-100" 
               >{t('hero.cta')}</Button>
               <Button 
               variant="secondary"
                 onClick={() => window.open("https://beta.clous.app/")} 
-                className="text-white max-w-[12rem]" 
+                className="text-gray-foreground max-w-[12rem] hover:-translate-y-0.5 hover:shadow-sm transition-all duration-200 delay-100" 
               >{t('hero.cta')}</Button>
               </div>
             )}
