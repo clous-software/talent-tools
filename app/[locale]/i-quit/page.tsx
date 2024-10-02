@@ -9,6 +9,9 @@ import FileInput from "@/components/ui/fileInput";
 import mammoth from 'mammoth';
 import Head from 'next/head';
 import Link from 'next/link';
+import { formatTextForHtml } from "@/utils/formattingUtils";
+
+
 interface ScrollHeaderProps {
   translate: any; // Use the actual type if known; 'any' is a placeholder
 }
@@ -306,7 +309,7 @@ const QuitRoast = () => {
           </>
         ) : (
           <>
-          <div className="text-sm pt-20" dangerouslySetInnerHTML={{ __html: response }}></div>
+          <div className="text-sm pt-20" dangerouslySetInnerHTML={{ __html: formatTextForHtml(response) }}></div>
             {isCtaActive && (
               <div className='mt-6 flex gap-8'>
               <Button 
